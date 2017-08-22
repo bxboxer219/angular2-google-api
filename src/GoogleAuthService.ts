@@ -25,7 +25,7 @@ export class GoogleAuthService {
             gapi.load('auth2', () => {
                 let auth = gapi.auth2.init(this.googleApi.getConfig().getClientConfig());
                 observer.next(auth);
-                //this.GoogleAuth = auth;
+                this.GoogleAuth = auth;
                 return auth;
             });
         });
